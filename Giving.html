@@ -15,7 +15,7 @@
     }
 
     nav {
-      background-color: lightgrey;
+      background-color: black;
       box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
     }
 
@@ -37,11 +37,11 @@
       text-decoration: none;
       display: flex;
       align-items: center;
-      color: black;
+      color: white;
     }
 
     nav a:hover {
-      background-color: #f0f0f0;
+      background-color: #0000;
     }
 
     .navbar li a.active {
@@ -93,6 +93,23 @@
       }
     }
 
+    .heading {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 70px;
+    }
+
+    .EFT, .IMT {
+      text-align: center;
+      font-size: 25px;
+    }
+
+    .give {
+      text-align: center;
+      font-size: 20px;
+      font-style: italic;
+    }
+
   </style>
 </head>
   
@@ -100,19 +117,22 @@
 <body>
       <nav>
         <ul class="sidebar">
-         <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+         <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
+           <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
          <li><a href="index.html">Home</a></li>
          <li><a href="Ministries.html">Ministries</a></li>
          <li><a href="Giving.html">Giving</a></li>
          <li><a href="Contact.html">Contact</a></li>
       </ul>
+        
         <ul class="navbar">
           <li><a href="Giving.html">Giving</a></li>
           <li class="hideOnMobile"><a href="index.html">Home</a></li>
           <li class="hideOnMobile"><a href="Ministries.html">Ministries</a></li>
           <li class="hideOnMobile"><a class="active" href="Giving.html">Giving</a></li>
           <li class="hideOnMobile"><a href="Contact.html">Contact</a></li>
-          <li class="menu-button" onclick=showSidebar()><a href="#"><<svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+          <li class="menu-button" onclick=showSidebar()><a href="#"><<svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
          </ul>
       </nav>
     
@@ -127,6 +147,38 @@
       sidebar.style.display = 'none'
     }
   </script>
+
+
+  <p class="heading"> WAYS TO GIVE </p>
+
+  <br><br><br><br><br>
+
+  <p class="EFT"> EFT <br><br>
+    Banking Details <br>
+    Account Name: Acornhoek Church of the Nazarene <br>
+    Account Number: 98765432111 <br>
+    Bank Name: First National Bank <br>
+    Branch Code: 250655 <br>
+    Ref: Name & Surname <br>
+  </p>
+
+  <br><br><br><br><br>
+
+  <p class="IMT"> INSTANT MONEY TRANSFER <br><br>
+    0608686521 <br>
+    E-Wallet <br>
+    Cash Send <br>
+    Capitec Money Transfer <br>
+  </p>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <p class="give">
+    "Let each one give according as he has determined <br>
+     in his heart, not reluctantly or under compulsion <br>
+     for God loves a cheerful giver" (2 Corinthians 9:7) <br>
+  </p>
+  
 </body>
 
 </html>

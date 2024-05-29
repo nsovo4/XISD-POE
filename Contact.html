@@ -1,253 +1,166 @@
-                                                                                                <!DOCTYPE html>
-                                                                                                <html>
-                                                                                                <head>
-                                                                                                  <meta charset="utf-8">
-                                                                                                  <meta name="viewport" content="width=device-width">
-                                                                                                  <link rel="icon" type="image/x-icon" href="Logo.jpg">
-                                                                                                  <title>Contact</title>
+<!DOCTYPE html>
+<html>
 
-                                                                                                  <style>
-                                                                                                    * {
-                                                                                                      margin: 0;
-                                                                                                      padding: 0;
-                                                                                                      box-sizing: border-box;
-                                                                                                      font-family: Arial, sans-serif;
-                                                                                                    }
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/x-icon" href="Logo.jpg">
+  <title>Contact</title>
 
-                                                                                                    body {
-                                                                                                      font-size: 16px;
-                                                                                                      line-height: 1.6;
-                                                                                                      color: #333;
-                                                                                                      background-color: #f9f9f9;
-                                                                                                    }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
 
-                                                                                                    nav {
-                                                                                                      background-color: #f0f0f0;
-                                                                                                      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                                                                                                      position: fixed;
-                                                                                                      width: 100%;
-                                                                                                      top: 0;
-                                                                                                      z-index: 1000;
-                                                                                                    }
+    nav {
+      background-color: black;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    }
 
-                                                                                                    nav ul {
-                                                                                                      list-style: none;
-                                                                                                      display: flex;
-                                                                                                      justify-content: flex-end;
-                                                                                                      align-items: center;
-                                                                                                      padding: 10px;
-                                                                                                    }
+    nav ul {
+      width: 100%;
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
 
-                                                                                                    nav li {
-                                                                                                      margin: 0 10px;
-                                                                                                    }
+    nav li {
+      height: 50px;
+    }
 
-                                                                                                    nav a {
-                                                                                                      text-decoration: none;
-                                                                                                      color: #333;
-                                                                                                      padding: 10px 20px;
-                                                                                                      border-radius: 5px;
-                                                                                                    }
+    nav a {
+      height: 100%;
+      padding: 0 30px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
 
-                                                                                                    nav a:hover, .navbar li a.active {
-                                                                                                      background-color: #0066ff;
-                                                                                                      color: #fff;
-                                                                                                    }
+    nav a:hover {
+      background-color: #000;
+    }
 
-                                                                                                    nav li:first-child {
-                                                                                                      margin-right: auto;
-                                                                                                      font-size: 1.5rem;
-                                                                                                      font-weight: bold;
-                                                                                                    }
+    .navbar li a.active {
+      color: #0066ff;
+    }
 
-                                                                                                    .sidebar {
-                                                                                                      position: fixed;
-                                                                                                      top: 0;
-                                                                                                      right: 0;
-                                                                                                      height: 100vh;
-                                                                                                      width: 250px;
-                                                                                                      z-index: 999;
-                                                                                                      background-color: rgba(255, 255, 255, 0.9);
-                                                                                                      backdrop-filter: blur(10px);
-                                                                                                      box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-                                                                                                      display: none;
-                                                                                                      flex-direction: column;
-                                                                                                      align-items: flex-start;
-                                                                                                      padding-top: 50px;
-                                                                                                    }
+    nav li:first-child {
+      margin-right: auto;
+      font-size: 35px;
+      font-weight: bold;
+    }
 
-                                                                                                    .sidebar li {
-                                                                                                      width: 100%;
-                                                                                                      margin: 10px 0;
-                                                                                                    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 250px;
+      z-index: 999;
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
 
-                                                                                                    .sidebar a {
-                                                                                                      width: 100%;
-                                                                                                      padding: 15px;
-                                                                                                      color: #333;
-                                                                                                    }
+    .sidebar li,
+    .a {
+      width: 100%;
+    }
 
-                                                                                                    .menu-button {
-                                                                                                      display: none;
-                                                                                                      cursor: pointer;
-                                                                                                    }
+    .menu-button {
+      display: none;
+    }
 
-                                                                                                    @media (max-width: 800px) {
-                                                                                                      .hideOnMobile {
-                                                                                                        display: none;
-                                                                                                      }
-                                                                                                      .menu-button {
-                                                                                                        display: block;
-                                                                                                      }
-                                                                                                    }
+    @media (max-width: 800px) {
+      .hideOnMobile {
+        display: none;
+      }
 
-                                                                                                    @media (max-width: 400px) {
-                                                                                                      .sidebar {
-                                                                                                        width: 100%;
-                                                                                                      }
-                                                                                                    }
+      .menu-button {
+        display: block;
+      }
+    }
 
-                                                                                                    h1 {
-                                                                                                      text-align: center;
-                                                                                                      font-size: 2.5rem;
-                                                                                                      margin-top: 100px;
-                                                                                                      color: #333;
-                                                                                                    }
+    @media (max-width: 400px) {
+      .sidebar {
+        width: 100%;
+      }
+    }
 
-                                                                                                    .main {
-                                                                                                      display: flex;
-                                                                                                      justify-content: center;
-                                                                                                      align-items: center;
-                                                                                                      margin: 50px 0;
-                                                                                                    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-top: 100px;
+      color: #333;
+    }
 
-                                                                                                    form {
-                                                                                                      width: 50%;
-                                                                                                      background: #fff;
-                                                                                                      padding: 20px;
-                                                                                                      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                                                                                                      border-radius: 10px;
-                                                                                                    }
+    .CONTACT {
+      text-align: center;
+      font-size: 25px;
+    }
+  </style>
+</head>
 
-                                                                                                    form label {
-                                                                                                      display: block;
-                                                                                                      margin-bottom: 10px;
-                                                                                                      font-weight: bold;
-                                                                                                    }
+<body>
+  <nav>
+    <ul class="sidebar">
+      <li onclick="hideSidebar()">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+          </svg></a>
+      </li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Ministries.html">Ministries</a></li>
+      <li><a href="Giving.html">Giving</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
 
-                                                                                                    form input, form textarea {
-                                                                                                      width: 100%;
-                                                                                                      padding: 10px;
-                                                                                                      margin-bottom: 20px;
-                                                                                                      border: 1px solid #ddd;
-                                                                                                      border-radius: 5px;
-                                                                                                    }
+    <ul class="navbar">
+      <li><a href="Contact.html">Contact</a></li>
+      <li class="hideOnMobile"><a href="index.html">Home</a></li>
+      <li class="hideOnMobile"><a href="Ministries.html">Ministries</a></li>
+      <li class="hideOnMobile"><a href="Giving.html">Giving</a></li>
+      <li class="hideOnMobile"><a class="active" href="Contact.html">Contact</a></li>
+      <li class="menu-button" onclick=showSidebar()>
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+          </svg></a>
+      </li>
+    </ul>
+  </nav>
 
-                                                                                                    form input[type="submit"] {
-                                                                                                      background-color: #0066ff;
-                                                                                                      color: #fff;
-                                                                                                      border: none;
-                                                                                                      cursor: pointer;
-                                                                                                      padding: 15px;
-                                                                                                      font-size: 1rem;
-                                                                                                    }
+  <script>
+    function showSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.style.display = 'flex';
+    }
 
-                                                                                                    form input[type="submit"]:hover {
-                                                                                                      background-color: #004bbd;
-                                                                                                    }
+    function hideSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.style.display = 'none';
+    }
+  </script>
 
-                                                                                                    .whatsapp-button {
-                                                                                                      position: fixed;
-                                                                                                      bottom: 60px;
-                                                                                                      right: 20px;
-                                                                                                      background-color: #25d366;
-                                                                                                      color: white;
-                                                                                                      border-radius: 50px;
-                                                                                                      padding: 10px 20px;
-                                                                                                      font-size: 16px;
-                                                                                                      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-                                                                                                      text-align: center;
-                                                                                                    }
+  <h1>Contact us</h1>
 
-                                                                                                    .whatsapp-button a {
-                                                                                                      color: white;
-                                                                                                      text-decoration: none;
-                                                                                                      display: flex;
-                                                                                                      align-items: center;
-                                                                                                    }
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-                                                                                                    .whatsapp-button svg {
-                                                                                                      margin-right: 10px;
-                                                                                                    }
+  <p class="CONTACT">
+    Address: Acornhoek <br><br>
+    Phone: 0608686521 <br><br>
+    E-mail: AcornhoekChurch@gmail.com <br>
+    <br>
+  </p>
 
-                                                                                                    .whatsapp-text {
-                                                                                                      text-align: center;
-                                                                                                      margin-top: 10px;
-                                                                                                      font-size: 14px;
-                                                                                                      color: #333;
-                                                                                                    }
 
-                                                                                                  </style>
-                                                                                                </head>
+</body>
 
-                                                                                                <body>
-                                                                                                  <nav>
-                                                                                                    <ul class="sidebar">
-                                                                                                      <li onclick="hideSidebar()">
-                                                                                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
-                                                                                                      </li>
-                                                                                                      <li><a href="index.html">Home</a></li>
-                                                                                                      <li><a href="Ministries.html">Ministries</a></li>
-                                                                                                      <li><a href="Giving.html">Giving</a></li>
-                                                                                                      <li><a href="Contact.html">Contact</a></li>
-                                                                                                    </ul>
-                                                                                                    <ul class="navbar">
-                                                                                                      <li class="menu-button" onclick="showSidebar()">
-                                                                                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
-                                                                                                      </li>
-                                                                                                      <li class="hideOnMobile"><a href="index.html">Home</a></li>
-                                                                                                      <li class="hideOnMobile"><a href="Ministries.html">Ministries</a></li>
-                                                                                                      <li class="hideOnMobile"><a href="Giving.html">Giving</a></li>
-                                                                                                      <li class="hideOnMobile"><a class="active" href="Contact.html">Contact</a></li>
-                                                                                                    </ul>
-                                                                                                  </nav>
-
-                                                                                                  <script>
-                                                                                                    function showSidebar() {
-                                                                                                      const sidebar = document.querySelector('.sidebar');
-                                                                                                      sidebar.style.display = 'flex';
-                                                                                                    }
-
-                                                                                                    function hideSidebar() {
-                                                                                                      const sidebar = document.querySelector('.sidebar');
-                                                                                                      sidebar.style.display = 'none';
-                                                                                                    }
-                                                                                                  </script>
-
-                                                                                                  <h1>Contact us</h1>
-
-                                                                                                  <div class="main">
-                                                                                                    <form action="/action_page.php">
-                                                                                                      <label for="fname">First Name</label>
-                                                                                                      <input type="text" id="fname" name="firstname" placeholder="First Name">
-
-                                                                                                      <label for="lname">Last Name</label>
-                                                                                                      <input type="text" id="lname" name="lastname" placeholder="Last Name">
-
-                                                                                                      <label for="email">Email</label>
-                                                                                                      <input type="email" id="email" name="email" placeholder="Email">
-
-                                                                                                      <label for="phone">Phone</label>
-                                                                                                      <input type="tel" id="phone" name="phone" placeholder="Phone">
-
-                                                                                                      <label for="Message">Message</label>
-                                                                                                      <textarea id="Message" name="Message" placeholder="Write something.." style="height:120px"></textarea>
-
-                                                                                                      <input type="submit" value="Submit">
-                                                                                                    </form>
-                                                                                                  </div>
-
-                                                                                                  <div class="whatsapp-button">
-                                                                                                    <a href="https://api.whatsapp.com/send?phone=0633826035&text=Hello, I would like more information." target="_blank">
-                                                                                                      <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
-                                                                                                        <path d="M480-160q-67 0-125-25t-102-68q-43-43-68-102T160-480q0-67 25-125t68-102q43-43 102-68t125-25q67 0 125 25t102 68q43 43 68 102t25 125q0 67-25 125t-68 102q-43 43-102 68t-125 25Zm0-580q-87 0-148 61T270-480q0 44 20 87t55 74l-20 58 59-19q33 25 74 44.5T480-210q87 0 148-61t61-148q0-87-61-148t-148-61Zm7 480q-37 0-67.5-14
+</html>

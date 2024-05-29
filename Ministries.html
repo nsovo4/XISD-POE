@@ -14,7 +14,7 @@
     }
 
     nav {
-      background-color: lightgrey;
+      background-color: black;
       box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
     }
 
@@ -36,11 +36,11 @@
       text-decoration: none;
       display: flex;
       align-items: center;
-      color: black;
+      color: white;
     }
 
     nav a:hover {
-      background-color: #f0f0f0;
+      background-color: #000;
     }
 
     .navbar li a.active {
@@ -112,6 +112,28 @@
       height: auto;
     }
 
+    .gallery-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        border: 2px solid #ccc;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+    }
+
+    .gallery-1, .gallery-2 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .gallery-1 img, .gallery-2 img {
+        width: 50%;
+        height: 500px;
+        object-fit: cover;
+    }
+
     div.desc {
       padding: 15px;
       text-align: center;
@@ -140,7 +162,6 @@
     .desc-1 {
       font-size: 20px;
     }
-    
   </style>
 </head>
 
@@ -265,25 +286,22 @@
     </div>
   </div>
 
-  
   <div class="gallery-1">
     <img src="Quote1.jpg" alt="quote" width="50%" height="500px">
     <img src="Quote2.jpg" alt="quote" width="50%" height="500px">
   </div>
 
-  <!--
   <div class="gallery-2">
-    <img src="" alt="quote" width="50%" height="500px">
+    <img src="q3.jpg" alt="quote" width="50%" height="500px">
     <img src="verse.jpg" alt="quote" width="50%" height="500px">
   </div>
-  -->
 
   <div class="NYI">
     <h1>NYI</h1>
     <a target="blank" href="BE.jpg">
-     <img src="BE.jpg" alt="be" width="30%" height="300px">
+      <img src="BE.jpg" alt="be" width="30%" height="300px">
     </a>
-    
+
     <div class="desc-1">
       In Evangelism, we are called to BE God's light in <br>
       the dark and ignored places of our world. We are <br>
@@ -295,36 +313,36 @@
   </div>
 
   <div class="NYI">
-  <a target="blank" href="DO.jpg">
-    <img src="DO.jpg" alt="do" width="30%" height="300px">
-  </a>
-    
-  <div class="desc-1">
-    Through Discipleship, we journey together with <br>
-    other believers as we follow in the footsteps of <br>
-    Jesus. As we DO life together, we learn what it <br>
-    means to talk together, serve together, sacrifice <br>
-    together, fall and get back up together. We DO the <br>
-    hard work of becoming more like our Savior, living <br>
-    surrendered lives in community.
-   </div>
+    <a target="blank" href="DO.jpg">
+      <img src="DO.jpg" alt="do" width="30%" height="300px">
+    </a>
+
+    <div class="desc-1">
+      Through Discipleship, we journey together with <br>
+      other believers as we follow in the footsteps of <br>
+      Jesus. As we DO life together, we learn what it <br>
+      means to talk together, serve together, sacrifice <br>
+      together, fall and get back up together. We DO the <br>
+      hard work of becoming more like our Savior, living <br>
+      surrendered lives in community.
+    </div>
   </div>
 
 
   <div class="NYI">
-  <a target="_blank" href="GO.jpg">
-    <img src="GO.jpg" alt="go" width="30%" height="300px">
-  </a>
-    
-  <div class="desc-1">
-    In Leadership Development, we challenge and <br>
-    empower youth and their leaders to GO out into <br>
-    their communities as models of Christ's servant <br>
-    leadership. We cannot afford to wait until we think <br>
-    we know enough; we must GO now, learning along <br>
-    the way.
+    <a target="_blank" href="GO.jpg">
+      <img src="GO.jpg" alt="go" width="30%" height="300px">
+    </a>
+
+    <div class="desc-1">
+      In Leadership Development, we challenge and <br>
+      empower youth and their leaders to GO out into <br>
+      their communities as models of Christ's servant <br>
+      leadership. We cannot afford to wait until we think <br>
+      we know enough; we must GO now, learning along <br>
+      the way.
+    </div>
   </div>
-</div>
 
 </body>
 
