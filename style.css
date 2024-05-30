@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -27,27 +28,6 @@ body {
   margin-right: 20px;
   margin-top: -60px;
 }
-
-/*
-.navbar ul {
-  list-style-type: none;
-  background-color: white;
-  padding: 0px;
-  margin-top: 170px;
-  overflow: hidden;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: black;
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  width: 300px;
-}
-*/
 
 .navbar {
   width: 100%;
@@ -126,7 +106,6 @@ body {
   width: 50%
 }
 
-
 .col-1 img,
 .col-2 img {
   display: block;
@@ -140,5 +119,15 @@ body {
 .row2 {
   display: flex;
   background-color: white;
+}
+
+footer {
+  background-color: #1E2B64;
+  color: #fff;
+  padding: 5px 20px;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
